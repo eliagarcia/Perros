@@ -132,6 +132,5 @@ public class ProductFirestoreRepository implements ProductRepository {
             emitter.onNext(products);
             emitter.onComplete();
           });
-    });
-  }
+    });  }
 }
