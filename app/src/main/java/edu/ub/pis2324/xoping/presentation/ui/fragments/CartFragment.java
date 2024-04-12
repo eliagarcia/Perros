@@ -51,7 +51,7 @@ public class CartFragment extends Fragment {
     navController = Navigation.findNavController(view);
 
     initRecyclerView();
-    initViewModel();
+    //initViewModel();
 
     cartViewModel.fetchCart();
   }
@@ -69,20 +69,22 @@ public class CartFragment extends Fragment {
     });
     binding.rvCartLineItems.setAdapter(rvCartLineItemsAdapter);
   }
-
+/*
   private void initViewModel() {
     cartViewModel = new ViewModelProvider(
         this,
         new CartViewModel.Factory(
             getActivity().getApplication(),
-            appContainer.fetchCartUseCase,
-            appContainer.removeFromCartUseCase
-//            ((MainActivity) getActivity()).getClientModel()
+            //appContainer.fetchCartUseCase,
+            //appContainer.removeFromCartUseCase
+ //            ((MainActivity) getActivity()).getClientModel()
         )
     ).get(CartViewModel.class);
 
     initObservers();
   }
+
+ */
 
   private void initObservers() {
     cartViewModel.getFetchCartState().observe(getViewLifecycleOwner(), state -> {

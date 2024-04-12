@@ -3,7 +3,9 @@ package edu.ub.pis2324.xoping.presentation.ui.activities;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.navigation.NavController;
 import androidx.navigation.NavDestination;
+
 import androidx.navigation.fragment.NavHostFragment;
+
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
@@ -12,12 +14,15 @@ import android.view.View;
 
 import edu.ub.pis2324.xoping.R;
 import edu.ub.pis2324.xoping.databinding.ActivityMainBinding;
+import edu.ub.pis2324.xoping.presentation.viewmodels.fragments.LogInViewModel;
 
 public class MainActivity extends AppCompatActivity {
   /* Attributes */
   private NavController navController;
+
   AppBarConfiguration appBarConfiguration;
   private ActivityMainBinding binding;
+    private LogInViewModel logInViewModel;
 
   /**
    * Called when the activity is being created.
@@ -32,11 +37,14 @@ public class MainActivity extends AppCompatActivity {
 
     /* Initializations */
     initNavigation();
+
   }
 
   /**
    * Initialize the navigation.
    */
+
+
   private void initNavigation() {
     /* Set up the navigation controller */
     navController = ( (NavHostFragment) getSupportFragmentManager()
@@ -105,5 +113,4 @@ public class MainActivity extends AppCompatActivity {
         || super.onSupportNavigateUp();
   }
 
-  private
 }

@@ -15,7 +15,7 @@ import edu.ub.pis2324.xoping.domain.usecases.RemoveFromCartUseCase;
 import edu.ub.pis2324.xoping.domain.usecases.SignUpUseCase;
 import edu.ub.pis2324.xoping.domain.usecases.implementations.AddProductToCartUseCaseImpl;
 import edu.ub.pis2324.xoping.domain.services.implementations.CheckClientExistsServiceImpl;
-import edu.ub.pis2324.xoping.domain.usecases.implementations.FetchCartUseCaseImpl;
+//import edu.ub.pis2324.xoping.domain.usecases.implementations.FetchCartUseCaseImpl;
 import edu.ub.pis2324.xoping.domain.usecases.implementations.FetchClientUseCaseImpl;
 import edu.ub.pis2324.xoping.domain.usecases.implementations.FetchProductsByNameUseCaseImpl;
 import edu.ub.pis2324.xoping.domain.usecases.implementations.FetchProductsCatalogUseCaseImpl;
@@ -43,8 +43,8 @@ public class AppContainer {
   public final FetchClientUseCase fetchClientUseCase
       = new FetchClientUseCaseImpl(clientRepository);
 
-  public final FetchCartUseCase fetchCartUseCase
-      = new FetchCartUseCaseImpl(fetchClientUseCase, productRepository);
+  //public final FetchCartUseCase fetchCartUseCase
+     // = new FetchCartUseCaseImpl(fetchClientUseCase, productRepository);
 
   public final FetchProductsCatalogUseCase fetchProductsCatalogUseCase
       = new FetchProductsCatalogUseCaseImpl(productRepository);
@@ -58,6 +58,6 @@ public class AppContainer {
   public final SignUpUseCase signUpUseCase
       = new SignUpUseCaseImpl(checkClientUseCase, clientRepository);
 
-  public final RemoveFromCartUseCase removeFromCartUseCase
-      = new RemoveFromCartUseCaseImpl(fetchCartUseCase, clientRepository);
+  //public final RemoveFromCartUseCase removeFromCartUseCase
+    //  = new RemoveFromCartUseCaseImpl(fetchCartUseCase, clientRepository);
 }

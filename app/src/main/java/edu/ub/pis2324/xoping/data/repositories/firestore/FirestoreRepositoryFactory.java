@@ -12,6 +12,6 @@ public class FirestoreRepositoryFactory implements AbstractRepositoryFactory {
 
   @Override
   public AnimalRepository createProductRepository() {
-    return new ProductFirestoreRepository();
+    return new AnimalFirestoreRepository();
   }
 }
