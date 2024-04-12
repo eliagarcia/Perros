@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="?attr/colorSurfaceContainerHigh"
+    android:background="@drawable/background"
     tools:context=".presentation.ui.fragments.LogInFragment">
 
     <androidx.cardview.widget.CardView
@@ -23,14 +23,15 @@
             android:id="@+id/constraintLayout5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="16dp">
+            android:background="@color/black"
+            android:layout_margin="6dp">
 
             <TextView
                 android:id="@+id/tvLoginTitle"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:text="@string/login_text"
-                android:textColor="@color/black"
+                android:textColor="@color/white"
                 android:textSize="18sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -46,6 +47,8 @@
                 android:inputType="text"
                 android:textAlignment="center"
                 android:textSize="20sp"
+                android:textColorHint="@color/white"
+                android:drawableLeft="@drawable/baseline_person_outline_24"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tvLoginTitle" />
@@ -60,6 +63,8 @@
                 android:inputType="textPassword"
                 android:textAlignment="center"
                 android:textSize="20sp"
+                android:textColorHint="@color/white"
+                android:drawableLeft="@drawable/baseline_password_24"
                 app:layout_constraintStart_toStartOf="@+id/etLoginUsername"
                 app:layout_constraintTop_toBottomOf="@+id/etLoginUsername" />
 
@@ -80,7 +85,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
                 android:text="@string/login_text"
-                android:textColor="@color/black"
+                android:textColor="@color/white"
                 android:textSize="18sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -109,7 +114,7 @@
         android:fontFamily="sans-serif-condensed-medium"
         android:gravity="center"
         android:text="@string/logo_name"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:textSize="34sp"
         android:textStyle="normal|bold"
         app:layout_constraintBottom_toTopOf="@+id/cardView2"

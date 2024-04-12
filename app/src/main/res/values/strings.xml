@@ -1,10 +1,10 @@
 <resources>
-    <string name="app_name">XopingSol</string>
-    <string name="logo_name">Xoping</string>
+    <string name="app_name">Todos Para Perros</string>
+    <string name="logo_name">Todos Para Perros</string>
     <string name="element_text">Text</string>
     <string name="element_number">N</string>
     <string name="disclaimer_text">Projecte Integrat de Software (2023/24), Universitat de Barcelona.
-        Exclusively designed for teaching purposes.</string>
+        MEDAH.</string>
 
     <!--   Login screen -->
     <string name="login_title">Hi, there!</string>
