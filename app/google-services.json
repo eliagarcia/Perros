@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "768291077856",
+    "project_id": "cleanecommerceapp",
+    "storage_bucket": "cleanecommerceapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:768291077856:android:d39c1e89a3499993c1da85",
+        "android_client_info": {
+          "package_name": "edu.ub.pis2324.xoping"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBFMOdCbtfwJOyA8SdTIojtE1NPyYMBtog"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
