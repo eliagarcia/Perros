@@ -2,24 +2,24 @@ package edu.ub.pis2324.xoping.domain.usecases.implementations;
 
 import java.util.List;
 
-import edu.ub.pis2324.xoping.domain.di.repositories.ProductRepository;
-import edu.ub.pis2324.xoping.domain.model.entities.Product;
+import edu.ub.pis2324.xoping.domain.di.repositories.AnimalRepository;
+import edu.ub.pis2324.xoping.domain.model.entities.Animal;
 import edu.ub.pis2324.xoping.utils.error_handling.XopingThrowableMapper;
 import io.reactivex.rxjava3.core.Observable;
 
 public class FetchProductsCatalogUseCaseImpl implements edu.ub.pis2324.xoping.domain.usecases.FetchProductsCatalogUseCase {
   /* Attributes */
-  private ProductRepository productRepository;
+  private AnimalRepository productRepository;
   private final XopingThrowableMapper throwableMapper;
 
   /**
    * Constructor
    */
-  public FetchProductsCatalogUseCaseImpl(ProductRepository productRepository) {
+  public FetchProductsCatalogUseCaseImpl(AnimalRepository productRepository) {
     this.productRepository = productRepository;
 
     throwableMapper = new XopingThrowableMapper();
-    throwableMapper.add(ProductRepository.Error.GETALL_UNKNOWN_ERROR, Error.PRODUCTS_DATA_ACCESS_ERROR);
+    throwableMapper.add(AnimalRepository.Error.GETALL_UNKNOWN_ERROR, Error.PRODUCTS_DATA_ACCESS_ERROR);
   }
 
   /**
@@ -27,7 +27,7 @@ public class FetchProductsCatalogUseCaseImpl implements edu.ub.pis2324.xoping.do
    * @return
    */
   @Override
-  public Observable<List<Product>> execute() {
+  public Observable<List<Animal>> execute() {
     return productRepository.getAll()
       .onErrorResumeNext(throwable -> Observable.error(throwableMapper.map(throwable)));
   }

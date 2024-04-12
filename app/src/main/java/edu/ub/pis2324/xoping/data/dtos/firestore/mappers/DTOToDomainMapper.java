@@ -5,10 +5,8 @@ import org.modelmapper.ModelMapper;
 import org.modelmapper.config.Configuration;
 import org.modelmapper.convention.MatchingStrategies;
 
-import java.util.UUID;
-
 import edu.ub.pis2324.xoping.domain.model.valueobjects.ClientId;
-import edu.ub.pis2324.xoping.domain.model.valueobjects.ProductId;
+import edu.ub.pis2324.xoping.domain.model.valueobjects.AnimalId;
 
 /*
  * This class is a singleton that provides a generic ModelMapper instance.
@@ -30,10 +28,10 @@ public class DTOToDomainMapper extends ModelMapper {
       }
     });
 
-    super.addConverter(new AbstractConverter<String, ProductId>() {
+    super.addConverter(new AbstractConverter<String, AnimalId>() {
       @Override
-      protected ProductId convert(String source) {
-        return new ProductId(source);
+      protected AnimalId convert(String source) {
+        return new AnimalId(source);
       }
     });
   }

@@ -6,11 +6,10 @@ import org.modelmapper.config.Configuration;
 import org.modelmapper.convention.MatchingStrategies;
 
 import java.util.List;
-import java.util.UUID;
 import java.util.stream.Collectors;
 
 import edu.ub.pis2324.xoping.domain.model.valueobjects.ClientId;
-import edu.ub.pis2324.xoping.domain.model.valueobjects.ProductId;
+import edu.ub.pis2324.xoping.domain.model.valueobjects.AnimalId;
 
 /*
  * This class is a singleton that provides a generic ModelMapper instance.
@@ -25,9 +24,9 @@ public class DomainToPOMapper extends ModelMapper {
         .setFieldAccessLevel(Configuration.AccessLevel.PRIVATE)
         .setMatchingStrategy(MatchingStrategies.LOOSE);
 
-    super.addConverter(new AbstractConverter<ProductId, String>() {
+    super.addConverter(new AbstractConverter<AnimalId, String>() {
       @Override
-      protected String convert(ProductId source) {
+      protected String convert(AnimalId source) {
         return source.toString();
       }
     });

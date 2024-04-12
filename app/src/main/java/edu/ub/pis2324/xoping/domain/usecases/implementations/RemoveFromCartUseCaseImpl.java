@@ -2,7 +2,7 @@ package edu.ub.pis2324.xoping.domain.usecases.implementations;
 
 import edu.ub.pis2324.xoping.domain.di.repositories.ClientRepository;
 import edu.ub.pis2324.xoping.domain.model.valueobjects.ClientId;
-import edu.ub.pis2324.xoping.domain.model.valueobjects.ProductId;
+import edu.ub.pis2324.xoping.domain.model.valueobjects.AnimalId;
 import edu.ub.pis2324.xoping.domain.responses.FetchCartResponse;
 import edu.ub.pis2324.xoping.domain.usecases.FetchCartUseCase;
 import edu.ub.pis2324.xoping.domain.usecases.RemoveFromCartUseCase;
@@ -31,7 +31,7 @@ public class RemoveFromCartUseCaseImpl implements RemoveFromCartUseCase {
   }
 
   @Override
-  public Observable<FetchCartResponse> execute(ClientId clientId, ProductId productId) {
+  public Observable<FetchCartResponse> execute(ClientId clientId, AnimalId productId) {
     return clientRepository.update(clientId, client -> {
       client.removeProductFromCart(productId);
     })

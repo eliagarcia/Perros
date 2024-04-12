@@ -5,7 +5,7 @@ import java.util.Map;
 import edu.ub.pis2324.xoping.domain.model.valueobjects.Cart;
 import edu.ub.pis2324.xoping.domain.model.valueobjects.ClientId;
 import edu.ub.pis2324.xoping.domain.model.valueobjects.LineItem;
-import edu.ub.pis2324.xoping.domain.model.valueobjects.ProductId;
+import edu.ub.pis2324.xoping.domain.model.valueobjects.AnimalId;
 
 /**
  * Domain entity holding the data and the behavior of a client.
@@ -89,7 +89,7 @@ public class Client {
    * Adds a purchase to the client.
    * @param productId The id of the product to be purchased.
    */
-  public void addProductToCart(ProductId productId, Integer addedQuantity) {
+  public void addProductToCart(AnimalId productId, Integer addedQuantity) {
     cart.add(productId, addedQuantity);
   }
 
@@ -98,7 +98,7 @@ public class Client {
    * @param productId The id of the product to be removed.
    * @return True if the product was removed, false otherwise.
    */
-  public void removeProductFromCart(ProductId productId) {
+  public void removeProductFromCart(AnimalId productId) {
     cart.remove(productId);
   }
 
@@ -106,7 +106,7 @@ public class Client {
    * Gets the products in the client's cart.
    * @return The products in the client's cart.
    */
-  public Map<ProductId, LineItem<ProductId>> getCartLines() {
+  public Map<AnimalId, LineItem<AnimalId>> getCartLines() {
     return cart.getCartLines();
   }
 

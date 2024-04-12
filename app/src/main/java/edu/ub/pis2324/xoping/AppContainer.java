@@ -2,7 +2,7 @@ package edu.ub.pis2324.xoping;
 
 import edu.ub.pis2324.xoping.data.repositories.firestore.FirestoreRepositoryFactory;
 import edu.ub.pis2324.xoping.domain.di.repositories.ClientRepository;
-import edu.ub.pis2324.xoping.domain.di.repositories.ProductRepository;
+import edu.ub.pis2324.xoping.domain.di.repositories.AnimalRepository;
 import edu.ub.pis2324.xoping.domain.di.repositories.AbstractRepositoryFactory;
 import edu.ub.pis2324.xoping.domain.usecases.AddProductToCartUseCase;
 import edu.ub.pis2324.xoping.domain.services.CheckClientExistsService;
@@ -29,7 +29,7 @@ public class AppContainer {
       = new FirestoreRepositoryFactory();
   public final ClientRepository clientRepository
       = abstractRepositoryFactory.createClientRepository();
-  public final ProductRepository productRepository
+  public final AnimalRepository productRepository
       = abstractRepositoryFactory.createProductRepository();
 
   /* Domain-application services */

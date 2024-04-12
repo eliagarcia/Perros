@@ -8,14 +8,13 @@ import org.junit.runner.RunWith;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.UUID;
 import java.util.concurrent.TimeUnit;
 
-import edu.ub.pis2324.xoping.domain.di.repositories.ProductRepository;
-import edu.ub.pis2324.xoping.domain.model.entities.Product;
+import edu.ub.pis2324.xoping.domain.di.repositories.AnimalRepository;
+import edu.ub.pis2324.xoping.domain.model.entities.Animal;
 import edu.ub.pis2324.xoping.domain.model.valueobjects.Price;
 import edu.ub.pis2324.xoping.data.repositories.firestore.ProductFirestoreRepository;
-import edu.ub.pis2324.xoping.domain.model.valueobjects.ProductId;
+import edu.ub.pis2324.xoping.domain.model.valueobjects.AnimalId;
 import io.reactivex.rxjava3.observers.TestObserver;
 
 
@@ -28,7 +27,7 @@ import io.reactivex.rxjava3.observers.TestObserver;
 @RunWith(AndroidJUnit4.class)
 public class ProductRepositoryTest {
 
-  private ProductRepository productRepository;
+  private AnimalRepository productRepository;
 
   @Before
   public void setUp() {
@@ -41,14 +40,14 @@ public class ProductRepositoryTest {
     String name = "Byson";
 
     // When
-    TestObserver<List<Product>> testObserver = TestObserver.create();
+    TestObserver<List<Animal>> testObserver = TestObserver.create();
     productRepository.getByName(name)
         .subscribe(testObserver);
 
     // Then
-    List<Product> productsList = new ArrayList<>();
-    productsList.add(new Product(
-        new ProductId( "05fadf8c-4802-4620-9540-f7e33d5dfdc1"),
+    List<Animal> productsList = new ArrayList<>();
+    productsList.add(new Animal(
+        new AnimalId( "05fadf8c-4802-4620-9540-f7e33d5dfdc1"),
         "Byson Vacuum Cleaner",
         "byson vacuum cleaner",
         "Introducing the Byson Vacuum Cleaner, a powerhouse for your cleaning needs. With advanced suction technology, it effortlessly tackles dust and debris, leaving your space immaculately clean. Make cleaning a breeze with the reliable performance of Byson.",
@@ -69,13 +68,13 @@ public class ProductRepositoryTest {
     String name = "UnexistingNamePrefix";
 
     // When
-    TestObserver<List<Product>> testObserver = TestObserver.create();
+    TestObserver<List<Animal>> testObserver = TestObserver.create();
     productRepository.getByName(name)
         .subscribe(testObserver);
     testObserver.awaitDone(5000, TimeUnit.MILLISECONDS);
 
     // Then
-    List<Product> emptyPoductsList = new ArrayList<>();
+    List<Animal> emptyPoductsList = new ArrayList<>();
     testObserver.assertValue(productsListObserved -> {
       return productsListObserved.equals(emptyPoductsList);
     });

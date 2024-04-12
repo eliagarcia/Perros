@@ -4,9 +4,8 @@ import android.os.Parcel;
 import android.os.Parcelable;
 
 import java.util.Objects;
-import java.util.UUID;
 
-import edu.ub.pis2324.xoping.domain.model.valueobjects.ProductId;
+import edu.ub.pis2324.xoping.domain.model.valueobjects.AnimalId;
 
 /**
  * Data class holding the information of a client
@@ -14,13 +13,13 @@ import edu.ub.pis2324.xoping.domain.model.valueobjects.ProductId;
  */
 public class ProductPO implements Parcelable {
   /* Attributes */
-  private ProductId id;
+  private AnimalId id;
   private String name;
   private String description;
   private String price;
   private String imageUrl;
 
-  public ProductPO(ProductId id, String name, String description, String price, String imageUrl) {
+  public ProductPO(AnimalId id, String name, String description, String price, String imageUrl) {
     this.id = id;
     this.name = name;
     this.description = description;
@@ -31,7 +30,7 @@ public class ProductPO implements Parcelable {
   public ProductPO() {
   }
 
-  public ProductId getId() { return id; }
+  public AnimalId getId() { return id; }
   public String getName() { return name; }
   public String getDescription() { return description; }
   public String getPrice() { return price; }
@@ -65,7 +64,7 @@ public class ProductPO implements Parcelable {
   }
 
   public void readFromParcel(Parcel source) {
-    this.id = (ProductId) source.readSerializable();
+    this.id = (AnimalId) source.readSerializable();
     this.name = source.readString();
     this.description = source.readString();
     this.price = source.readString();
@@ -73,7 +72,7 @@ public class ProductPO implements Parcelable {
   }
 
   protected ProductPO(Parcel in) {
-    this.id = (ProductId) in.readSerializable();
+    this.id = (AnimalId) in.readSerializable();
     this.name = in.readString();
     this.description = in.readString();
     this.price = in.readString();
