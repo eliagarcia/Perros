@@ -3,15 +3,15 @@ package edu.ub.pis2324.xoping.domain.model.valueobjects;
 import java.io.Serializable;
 import java.util.Objects;
 
-public class ProductId implements Serializable {
+public class AnimalId implements Serializable {
   private String id;
 
-  public ProductId(String id) {
+  public AnimalId(String id) {
     this.id = id;
   }
 
   @SuppressWarnings("unused")
-  public ProductId() {}
+  public AnimalId() {}
 
   public String getId() {
     return id;
@@ -25,8 +25,8 @@ public class ProductId implements Serializable {
     if (obj == null || getClass() != obj.getClass()) {
       return false;
     }
-    ProductId productId = (ProductId) obj;
-    return Objects.equals(id, productId.id); // Use Objects.equals for null safety
+    AnimalId animalId = (AnimalId) obj;
+    return Objects.equals(id, animalId.id); // Use Objects.equals for null safety
   }
 
   @Override

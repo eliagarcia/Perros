@@ -15,7 +15,7 @@ import com.google.gson.Gson;
 import java.util.ArrayList;
 import java.util.List;
 
-import edu.ub.pis2324.xoping.domain.model.entities.Product;
+import edu.ub.pis2324.xoping.domain.model.entities.Animal;
 import edu.ub.pis2324.xoping.domain.model.valueobjects.PricedLineItem;
 import edu.ub.pis2324.xoping.presentation.pos.CartPO;
 import edu.ub.pis2324.xoping.domain.responses.FetchCartResponse;
@@ -106,8 +106,8 @@ public class CartViewModel extends AndroidViewModel {
   private void handleFetchCartSuccess(FetchCartResponse fetchCartResponse) {
     // Cast List<PricedLineItem<Product>> to List<PricedLineItem<ProductPO>>
     List<PricedLineItem<ProductPO>> pricedLineItems = new ArrayList<>();
-    for (PricedLineItem<Product> pricedLineItem : fetchCartResponse.getPricedLineItems()) {
-      Product product = pricedLineItem.getItem();
+    for (PricedLineItem<Animal> pricedLineItem : fetchCartResponse.getPricedLineItems()) {
+      Animal product = pricedLineItem.getItem();
       pricedLineItems.add(
           new PricedLineItem<>(
               domainToPOMapper.map(product, ProductPO.class),

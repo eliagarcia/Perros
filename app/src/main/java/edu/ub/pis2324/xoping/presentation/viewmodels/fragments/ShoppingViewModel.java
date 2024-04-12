@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import edu.ub.pis2324.xoping.domain.model.entities.Product;
+import edu.ub.pis2324.xoping.domain.model.entities.Animal;
 import edu.ub.pis2324.xoping.domain.usecases.FetchProductsByNameUseCase;
 import edu.ub.pis2324.xoping.domain.usecases.FetchProductsCatalogUseCase;
 import edu.ub.pis2324.xoping.presentation.pos.ProductPO;
@@ -124,7 +124,7 @@ public class ShoppingViewModel extends ViewModel {
     compositeDisposable.add(d);
   }
 
-  public void handleFetchProductsCatalogSuccess(List<Product> gottenProducts) {
+  public void handleFetchProductsCatalogSuccess(List<Animal> gottenProducts) {
     // Presentation code
     List<ProductPO> gottenProductPOs = gottenProducts
         .stream()

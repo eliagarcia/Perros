@@ -2,22 +2,19 @@ package edu.ub.pis2324.xoping.domain.model.valueobjects;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.UUID;
-
-import edu.ub.pis2324.xoping.domain.model.entities.Product;
 
 public class Cart {
-  private Map<ProductId, LineItem<ProductId>> cartLines; // <Product id, quantity>
+  private Map<AnimalId, LineItem<AnimalId>> cartLines; // <Product id, quantity>
 
   public Cart() {
     this.cartLines = new HashMap<>();
   }
 
-  public Map<ProductId, LineItem<ProductId>> getCartLines() {
+  public Map<AnimalId, LineItem<AnimalId>> getCartLines() {
     return new HashMap<>(cartLines);
   }
 
-  public void add(ProductId productId, Integer quantity) {
+  public void add(AnimalId productId, Integer quantity) {
     if (cartLines.containsKey(productId)) {
       cartLines.put(productId, cartLines.get(productId).addQuantity(quantity));
     } else {
@@ -25,7 +22,7 @@ public class Cart {
     }
   }
 
-  public void remove(ProductId productId) {
+  public void remove(AnimalId productId) {
     if (cartLines.containsKey(productId)) {
       cartLines.remove(productId);
     }
