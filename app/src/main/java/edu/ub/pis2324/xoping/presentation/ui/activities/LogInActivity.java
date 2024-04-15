@@ -40,7 +40,6 @@ public class LogInActivity extends AppCompatActivity {
         binding = FragmentLogInBinding.inflate(getLayoutInflater());
         setContentView(R.layout.fragment_log_in);
         setSupportActionBar(binding.btnLogIn);
-        Log.d("AAAAAAAAAAAAA","AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
 
         /* Initializations */
         initLogIn();
@@ -48,7 +47,14 @@ public class LogInActivity extends AppCompatActivity {
     }
 
     private void setSupportActionBar(Button btnLogIn) {
-
+        if(btnLogIn != null){
+            btnLogIn.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Log.d("LogInActivity", "Button clicked");
+                }
+            });
+        }
     }
 
     /**
