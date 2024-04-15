@@ -1,100 +1,239 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_margin="8dp"
-    android:elevation="8dp"
-    app:cardCornerRadius="8dp">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <!-- Primera CardView -->
+    <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:elevation="8dp"
+        app:cardCornerRadius="8dp">
 
-
-
-        <androidx.cardview.widget.CardView
-            android:id="@+id/ivProductImageCard"
-            android:layout_width="96dp"
-            android:layout_height="96dp"
-            android:layout_margin="5dp"
-            android:elevation="0dp"
-            app:cardCornerRadius="8dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
-
-
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="19dp">
 
             <ImageView
-                android:id="@+id/ivProductImage"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                app:srcCompat="@drawable/ic_launcher_foreground" />
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/im1"
+                android:scaleType="centerCrop"/>
 
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Boto"
+                android:layout_marginStart="100dp"
+                android:paddingStart="40dp"
+                android:paddingEnd="40dp"
+                android:layout_gravity="end"/>
 
+        </LinearLayout>
 
+    </androidx.cardview.widget.CardView>
 
-        </androidx.cardview.widget.CardView>
-
-        <Button
-            android:id="@+id/button7"
-            android:layout_width="277dp"
-            android:layout_height="48dp"
-            android:text="Button"
-            android:visibility="visible"
-            tools:layout_editor_absoluteX="112dp"
-            tools:layout_editor_absoluteY="24dp"
-            tools:ignore="MissingConstraints" />
-
-
-        <!-- EXERCICI 2 -->
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <!-- Segunda CardView -->
+    <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:layout_constraintTop_toBottomOf="@id/ivProductImageCard" >
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:elevation="8dp"
+        app:cardCornerRadius="8dp">
 
-
-
-        <androidx.cardview.widget.CardView
-            android:id="@+id/ivProductImageCard2"
-            android:layout_width="96dp"
-            android:layout_height="96dp"
-            android:layout_margin="5dp"
-            android:elevation="0dp"
-            app:cardCornerRadius="8dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
-
-
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="19dp">
 
             <ImageView
-                android:id="@+id/ivProductImage2"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                app:srcCompat="@drawable/ic_launcher_foreground" />
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/im2"
+                android:scaleType="centerCrop"/>
 
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Boto"
+                android:layout_marginStart="100dp"
+                android:paddingStart="40dp"
+                android:paddingEnd="40dp"
+                android:layout_gravity="end"/>
 
+        </LinearLayout>
 
+    </androidx.cardview.widget.CardView>
 
-        </androidx.cardview.widget.CardView>
+    <!-- Tercera CardView -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:elevation="8dp"
+        app:cardCornerRadius="8dp">
 
-        <Button
-            android:id="@+id/button8"
-            android:layout_width="277dp"
-            android:layout_height="48dp"
-            android:text="Button"
-            android:visibility="visible"
-            tools:layout_editor_absoluteX="112dp"
-            tools:layout_editor_absoluteY="24dp"
-            tools:ignore="MissingConstraints" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="19dp">
 
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/im3"
+                android:scaleType="centerCrop"/>
 
-        <!-- EXERCICI 2 -->
-    </androidx.constraintlayout.widget.ConstraintLayout>
-</androidx.cardview.widget.CardView>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Boto"
+                android:layout_marginStart="100dp"
+                android:paddingStart="40dp"
+                android:paddingEnd="40dp"
+                android:layout_gravity="end"/>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <!-- Cuarta CardView -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:elevation="8dp"
+        app:cardCornerRadius="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="19dp">
+
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/im4"
+                android:scaleType="centerCrop"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Boto"
+                android:layout_marginStart="100dp"
+                android:paddingStart="40dp"
+                android:paddingEnd="40dp"
+                android:layout_gravity="end"/>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <!-- Quinta CardView -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:elevation="8dp"
+        app:cardCornerRadius="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="19dp">
+
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/im5"
+                android:scaleType="centerCrop"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Boto"
+                android:layout_marginStart="100dp"
+                android:paddingStart="40dp"
+                android:paddingEnd="40dp"
+                android:layout_gravity="end"/>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <!-- Sexta CardView -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:elevation="8dp"
+        app:cardCornerRadius="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="19dp">
+
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/im6"
+                android:scaleType="centerCrop"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Boto"
+                android:layout_marginStart="100dp"
+                android:paddingStart="40dp"
+                android:paddingEnd="40dp"
+                android:layout_gravity="end"/>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <!-- Septima CardView -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:elevation="8dp"
+        app:cardCornerRadius="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="19dp">
+
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/im7"
+                android:scaleType="centerCrop"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Boto"
+                android:layout_marginStart="100dp"
+                android:paddingStart="40dp"
+                android:paddingEnd="40dp"
+                android:layout_gravity="end"/>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>
