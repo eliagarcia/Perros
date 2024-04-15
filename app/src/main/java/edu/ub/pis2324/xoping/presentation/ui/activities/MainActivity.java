@@ -10,7 +10,9 @@ import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
+
 
 import edu.ub.pis2324.xoping.R;
 import edu.ub.pis2324.xoping.databinding.ActivityMainBinding;
@@ -34,7 +36,6 @@ public class MainActivity extends AppCompatActivity {
     binding = ActivityMainBinding.inflate(getLayoutInflater());
     setContentView(binding.getRoot());
     setSupportActionBar(binding.toolbar);
-
     /* Initializations */
     initNavigation();
 

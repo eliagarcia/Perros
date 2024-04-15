@@ -10,6 +10,7 @@ import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
@@ -37,8 +38,9 @@ public class LogInActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = FragmentLogInBinding.inflate(getLayoutInflater());
-        setContentView(binding.getRoot());
+        setContentView(R.layout.fragment_log_in);
         setSupportActionBar(binding.btnLogIn);
+        Log.d("AAAAAAAAAAAAA","AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
 
         /* Initializations */
         initLogIn();
@@ -61,8 +63,6 @@ public class LogInActivity extends AppCompatActivity {
                     FirebaseAuth.getInstance().signInWithEmailAndPassword(
                             String.valueOf(binding.etLoginUsername.getText()),
                             String.valueOf(binding.etLoginPassword.getText())
-
-
                     );
                     showHome();
                 } else {
