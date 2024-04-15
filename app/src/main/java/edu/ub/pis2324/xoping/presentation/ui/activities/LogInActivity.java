@@ -60,9 +60,9 @@ public class LogInActivity extends AppCompatActivity {
 
     private void initLogIn() {
         /* Set up the navigation controller */
-        navController = ((NavHostFragment) getSupportFragmentManager()
-                .findFragmentById(R.id.logInFragment))
-                .getNavController();
+        NavHostFragment a = (NavHostFragment) getSupportFragmentManager().findFragmentById(R.id.fragmentLogin);
+        System.out.println(a);
+        navController = a.getNavController();
 
         /* Set up the bottom navigation, indicating the fragments
            that are part of the bottom navigation.
