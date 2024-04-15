@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background"
+    android:background="@color/black"
     tools:context=".presentation.ui.fragments.SignUpFragment">
 
     <!--    <androidx.appcompat.widget.Toolbar-->
@@ -54,7 +54,7 @@
             <EditText
                 android:id="@+id/etSignupUsername"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="48dp"
                 android:layout_marginTop="8dp"
                 android:ems="10"
                 android:hint="@string/signup_enter_username_hint"
@@ -70,7 +70,7 @@
             <EditText
                 android:id="@+id/etSignUpEmail"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="48dp"
                 android:layout_marginTop="4dp"
                 android:ems="10"
                 android:hint="@string/signup_email_hint"
@@ -86,7 +86,7 @@
             <EditText
                 android:id="@+id/etSignupPassword"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="48dp"
                 android:layout_marginTop="4dp"
                 android:ems="10"
                 android:hint="@string/signup_enter_password_hint"
@@ -101,7 +101,7 @@
             <EditText
                 android:id="@+id/etSignupPasswordConfirmation"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="48dp"
                 android:layout_marginTop="4dp"
                 android:ems="10"
                 android:hint="@string/signup_enter_password_confirmation_hint"

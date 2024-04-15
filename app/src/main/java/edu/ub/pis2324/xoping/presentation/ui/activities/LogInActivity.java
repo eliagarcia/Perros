@@ -38,22 +38,19 @@ public class LogInActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = FragmentLogInBinding.inflate(getLayoutInflater());
-        setContentView(R.layout.fragment_log_in);
-        setSupportActionBar(binding.btnLogIn);
+        setContentView(binding.getRoot());
 
         /* Initializations */
         initLogIn();
 
     }
 
-    private void setSupportActionBar(Button btnLogIn) {
-        if(btnLogIn != null){
-            btnLogIn.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    Log.d("LogInActivity", "Button clicked");
-                }
-            });
+
+    private void setVisibilitybtnLogIn(NavDestination navDestination) {
+        if (navDestination.getId() == R.id.logInFragment) {
+            binding.btnLogIn.setVisibility(View.VISIBLE);
+        } else {
+            binding.btnLogIn.setVisibility(View.GONE);
         }
     }
 
@@ -62,21 +59,35 @@ public class LogInActivity extends AppCompatActivity {
      */
 
     private void initLogIn() {
+        /* Set up the navigation controller */
+        navController = ((NavHostFragment) getSupportFragmentManager()
+                .findFragmentById(R.id.logInFragment))
+                .getNavController();
+
+        /* Set up the bottom navigation, indicating the fragments
+           that are part of the bottom navigation.
+         */
+        appBarConfiguration = new AppBarConfiguration.Builder(
+                R.id.logInFragment
+        ).build();
+
+        /* Set up the action bar */
+        NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
+
+
+        /* Set up the log in button */
         binding.btnLogIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (!(binding.etLoginUsername.getText().toString().isEmpty() && binding.etLoginPassword.getText().toString().isEmpty())) {
-                    FirebaseAuth.getInstance().signInWithEmailAndPassword(
-                            String.valueOf(binding.etLoginUsername.getText()),
-                            String.valueOf(binding.etLoginPassword.getText())
-                    );
-                    showHome();
-                } else {
-                    Toast.makeText(LogInActivity.this, "Please fill in the fields", Toast.LENGTH_SHORT).show();
 
-                }
+                logInViewModel.login(binding.etLoginUsername.getText().toString(), binding.etLoginPassword.getText().toString());
+                showHome();
             }
+        });
 
+        /* Set up the listener for the navigation */
+        navController.addOnDestinationChangedListener((controller, destination, arguments) -> {
+            setVisibilitybtnLogIn(destination);
         });
 
 
