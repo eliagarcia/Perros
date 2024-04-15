@@ -79,9 +79,16 @@ public class LogInActivity extends AppCompatActivity {
         binding.btnLogIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                logInViewModel.login(binding.etLoginUsername.getText().toString(), binding.etLoginPassword.getText().toString());
-                showHome();
+                FirebaseAuth.getInstance().signInWithEmailAndPassword(binding.etLoginUsername.getText().toString(), binding.etLoginPassword.getText().toString())
+                        .addOnCompleteListener(task -> {
+                            if (task.isSuccessful()) {
+                                Log.d("LogInActivity", "User logged in");
+                                showHome();
+                            } else {
+                                Log.d("LogInActivity", "User not logged in");
+                                Toast.makeText(LogInActivity.this, "User not logged in", Toast.LENGTH_SHORT).show();
+                            }
+                        });
             }
         });
 
