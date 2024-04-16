@@ -19,7 +19,7 @@ import com.google.firebase.auth.FirebaseAuth;
 
 import edu.ub.pis2324.xoping.R;
 import edu.ub.pis2324.xoping.databinding.FragmentCatalegBinding;
-import edu.ub.pis2324.xoping.presentation.viewmodels.fragments.LogInViewModel;
+import edu.ub.pis2324.perros.presentation.viewmodels.fragments.LogInViewModel;
 
 public class CatalegActivity extends AppCompatActivity {
     /* Attributes */

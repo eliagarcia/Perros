@@ -2,7 +2,7 @@ package edu.ub.pis2324.perros.data.dtos.firestore;
 
 import com.google.firebase.firestore.DocumentId;
 
-import edu.ub.pis2324.xoping.domain.model.valueobjects.AnimalId;
+import edu.ub.pis2324.perros.domain.model.valueobjects.AnimalId;
 
 /**
  * DTO for a product.

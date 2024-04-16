@@ -13,8 +13,8 @@ import android.os.Bundle;
 import android.view.View;
 
 
-import edu.ub.pis2324.perros.R;
-import edu.ub.pis2324.perros.databinding.ActivityMainBinding;
+import edu.ub.pis2324.xoping.R;
+import edu.ub.pis2324.xoping.databinding.ActivityMainBinding;
 import edu.ub.pis2324.perros.presentation.viewmodels.fragments.LogInViewModel;
 
 public class MainActivity extends AppCompatActivity {

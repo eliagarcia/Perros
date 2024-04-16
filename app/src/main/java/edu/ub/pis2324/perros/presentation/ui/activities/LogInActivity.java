@@ -16,8 +16,8 @@ import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
 
-import edu.ub.pis2324.perros.R;
-import edu.ub.pis2324.perros.databinding.FragmentLogInBinding;
+import edu.ub.pis2324.xoping.R;
+import edu.ub.pis2324.xoping.databinding.FragmentLogInBinding;
 import edu.ub.pis2324.perros.presentation.viewmodels.fragments.LogInViewModel;
 
 public class LogInActivity extends AppCompatActivity {
