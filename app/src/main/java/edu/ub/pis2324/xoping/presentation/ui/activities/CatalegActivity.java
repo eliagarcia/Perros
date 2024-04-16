@@ -16,14 +16,14 @@ import android.view.View;
 import edu.ub.pis2324.xoping.R;
 import edu.ub.pis2324.xoping.databinding.ActivityMainBinding;
 import edu.ub.pis2324.xoping.databinding.FragmentLogInBinding;
-import edu.ub.pis2324.xoping.presentation.viewmodels.fragments.LogInViewModel;
+import edu.ub.pis2324.xoping.presentation.viewmodels.fragments.CatalegViewModel;
 
 public class CatalegActivity extends AppCompatActivity  {
     private NavController navController;
 
     AppBarConfiguration appBarConfiguration;
     private FragmentLogInBinding binding;
-    private LogInViewModel logInViewModel;
+    private CatalegViewModel catalegViewModel;
 
     /**
      * Called when the activity is being created.
@@ -37,7 +37,7 @@ public class CatalegActivity extends AppCompatActivity  {
         setContentView(binding.getRoot());
 
         /* Initializations */
-        initLogIn();
+        initCataleg();
 
     }
     
