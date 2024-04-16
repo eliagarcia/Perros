@@ -1,12 +1,15 @@
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context=".presentation.ui.fragments.CatalegFragment">
 
     <!-- Primera CardView -->
     <androidx.cardview.widget.CardView
+        android:id="@+id/fragmentCataleg"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
@@ -26,6 +29,7 @@
                 android:scaleType="centerCrop"/>
 
             <Button
+                android:id="@+id/perrete1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Boto"
@@ -59,6 +63,7 @@
                 android:scaleType="centerCrop"/>
 
             <Button
+                android:id="@+id/perrete2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Boto"
@@ -92,6 +97,7 @@
                 android:scaleType="centerCrop"/>
 
             <Button
+                android:id="@+id/gato1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Boto"
@@ -125,6 +131,7 @@
                 android:scaleType="centerCrop"/>
 
             <Button
+                android:id="@+id/gato2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Boto"
@@ -158,6 +165,7 @@
                 android:scaleType="centerCrop"/>
 
             <Button
+                android:id="@+id/gato3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Boto"
@@ -191,6 +199,7 @@
                 android:scaleType="centerCrop"/>
 
             <Button
+                android:id="@+id/perrete3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Boto"
@@ -224,8 +233,9 @@
                 android:scaleType="centerCrop"/>
 
             <Button
+                android:id="@+id/perrete4"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="48dp"
                 android:text="Boto"
                 android:layout_marginStart="100dp"
                 android:paddingStart="40dp"
