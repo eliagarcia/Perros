@@ -1,7 +1,7 @@
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -25,18 +25,18 @@
             <ImageView
                 android:layout_width="60dp"
                 android:layout_height="60dp"
-                android:src="@drawable/im1"
-                android:scaleType="centerCrop"/>
+                android:scaleType="centerCrop"
+                android:src="@drawable/im1" />
 
             <Button
                 android:id="@+id/perrete1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Boto"
+                android:layout_gravity="end"
                 android:layout_marginStart="100dp"
                 android:paddingStart="40dp"
                 android:paddingEnd="40dp"
-                android:layout_gravity="end"/>
+                android:text="Boto" />
 
         </LinearLayout>
 
@@ -59,18 +59,18 @@
             <ImageView
                 android:layout_width="60dp"
                 android:layout_height="60dp"
-                android:src="@drawable/im2"
-                android:scaleType="centerCrop"/>
+                android:scaleType="centerCrop"
+                android:src="@drawable/im2" />
 
             <Button
                 android:id="@+id/perrete2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Boto"
+                android:layout_gravity="end"
                 android:layout_marginStart="100dp"
                 android:paddingStart="40dp"
                 android:paddingEnd="40dp"
-                android:layout_gravity="end"/>
+                android:text="Boto" />
 
         </LinearLayout>
 
@@ -93,18 +93,18 @@
             <ImageView
                 android:layout_width="60dp"
                 android:layout_height="60dp"
-                android:src="@drawable/im3"
-                android:scaleType="centerCrop"/>
+                android:scaleType="centerCrop"
+                android:src="@drawable/im3" />
 
             <Button
                 android:id="@+id/gato1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Boto"
+                android:layout_gravity="end"
                 android:layout_marginStart="100dp"
                 android:paddingStart="40dp"
                 android:paddingEnd="40dp"
-                android:layout_gravity="end"/>
+                android:text="Boto" />
 
         </LinearLayout>
 
@@ -127,18 +127,18 @@
             <ImageView
                 android:layout_width="60dp"
                 android:layout_height="60dp"
-                android:src="@drawable/im4"
-                android:scaleType="centerCrop"/>
+                android:scaleType="centerCrop"
+                android:src="@drawable/im4" />
 
             <Button
                 android:id="@+id/gato2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Boto"
+                android:layout_gravity="end"
                 android:layout_marginStart="100dp"
                 android:paddingStart="40dp"
                 android:paddingEnd="40dp"
-                android:layout_gravity="end"/>
+                android:text="Boto" />
 
         </LinearLayout>
 
@@ -161,18 +161,18 @@
             <ImageView
                 android:layout_width="60dp"
                 android:layout_height="60dp"
-                android:src="@drawable/im5"
-                android:scaleType="centerCrop"/>
+                android:scaleType="centerCrop"
+                android:src="@drawable/im5" />
 
             <Button
                 android:id="@+id/gato3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Boto"
+                android:layout_gravity="end"
                 android:layout_marginStart="100dp"
                 android:paddingStart="40dp"
                 android:paddingEnd="40dp"
-                android:layout_gravity="end"/>
+                android:text="Boto" />
 
         </LinearLayout>
 
@@ -195,18 +195,18 @@
             <ImageView
                 android:layout_width="60dp"
                 android:layout_height="60dp"
-                android:src="@drawable/im6"
-                android:scaleType="centerCrop"/>
+                android:scaleType="centerCrop"
+                android:src="@drawable/im6" />
 
             <Button
                 android:id="@+id/perrete3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Boto"
+                android:layout_gravity="end"
                 android:layout_marginStart="100dp"
                 android:paddingStart="40dp"
                 android:paddingEnd="40dp"
-                android:layout_gravity="end"/>
+                android:text="Boto" />
 
         </LinearLayout>
 
@@ -229,18 +229,18 @@
             <ImageView
                 android:layout_width="60dp"
                 android:layout_height="60dp"
-                android:src="@drawable/im7"
-                android:scaleType="centerCrop"/>
+                android:scaleType="centerCrop"
+                android:src="@drawable/im7" />
 
             <Button
                 android:id="@+id/perrete4"
                 android:layout_width="wrap_content"
                 android:layout_height="48dp"
-                android:text="Boto"
+                android:layout_gravity="end"
                 android:layout_marginStart="100dp"
                 android:paddingStart="40dp"
                 android:paddingEnd="40dp"
-                android:layout_gravity="end"/>
+                android:text="Boto" />
 
         </LinearLayout>
 
