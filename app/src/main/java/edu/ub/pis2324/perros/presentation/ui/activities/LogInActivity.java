@@ -26,7 +26,6 @@ public class LogInActivity extends AppCompatActivity {
 
     AppBarConfiguration appBarConfiguration;
     private FragmentLogInBinding binding;
-    private LogInViewModel logInViewModel;
 
     /**
      * Called when the activity is being created.

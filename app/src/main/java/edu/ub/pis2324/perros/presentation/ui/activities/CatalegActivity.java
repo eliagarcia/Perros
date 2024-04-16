@@ -13,9 +13,13 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 
-import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.DocumentSnapshot;
+
+import java.util.Map;
 
 import edu.ub.pis2324.xoping.R;
 import edu.ub.pis2324.xoping.databinding.FragmentCatalegBinding;
@@ -27,7 +31,7 @@ public class CatalegActivity extends AppCompatActivity {
 
     AppBarConfiguration appBarConfiguration;
     private FragmentCatalegBinding binding;
-    private LogInViewModel logInViewModel;
+
 
     /**
      * Called when the activity is being created.
@@ -43,29 +47,36 @@ public class CatalegActivity extends AppCompatActivity {
     }
 
     private void initCataleg() {
-        /* Set up the navigation controller */
-        navController = ( (NavHostFragment) getSupportFragmentManager()
-            .findFragmentById(R.id.nav_host_fragment_main) )
-            .getNavController();
+        // Obtener referencia a la base de datos Firestore
+        FirebaseFirestore db = FirebaseFirestore.getInstance();
 
-        /*
-          Set up the bottom navigation, indicating the fragments
-          that are part of the bottom navigation.
-        */
-        appBarConfiguration = new AppBarConfiguration.Builder(
-            R.id.shoppingFragment,
-            R.id.cartFragment,
-            R.id.profileFragment
-        ).build();
+        // Obtener una referencia al LinearLayout donde se agregarán los botones
+        LinearLayout layout = findViewById(R.id.);
 
-        NavigationUI.setupActionBarWithNavController(this, navController);
-        NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
+        // Obtener los datos de los perros desde Firestore
+        db.collection("perros").get().addOnCompleteListener(task -> {
+            if (task.isSuccessful()) {
+                for (DocumentSnapshot document : task.getResult()) {
+                    Map<String, Object> perroData = document.getData();
+                    if (perroData != null) {
+                        // Crear un botón para cada perro
+                        Button button = new Button(this);
+                        button.setText(perroData.get("nombre").toString());
+                        button.setOnClickListener(v -> {
+                        });
 
-        binding.perrete1.setOnClickListener(v -> showHome());
+                        // Agregar el botón al layout
+                        layout.addView(button);
+                    }
+                }
+            } else {
+                Log.d("CatalegActivity", "Error getting documents: ", task.getException());
+            }
+        });
 
     }
 
-    private void showHome() {
+    private void showInfo() {
         navController.navigate(R.id.shoppingFragment);
     }
 }
