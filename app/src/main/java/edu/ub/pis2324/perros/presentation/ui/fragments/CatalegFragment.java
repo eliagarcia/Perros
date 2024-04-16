@@ -23,23 +23,15 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 
-<<<<<<<< HEAD:app/src/main/java/edu/ub/pis2324/perros/presentation/ui/fragments/CatalegFragment.java
-import edu.ub.pis2324.xoping.AppContainer;
-import edu.ub.pis2324.xoping.MyApplication;
-import edu.ub.pis2324.xoping.R;
-import edu.ub.pis2324.xoping.databinding.FragmentCatalegBinding;
-import edu.ub.pis2324.xoping.presentation.pos.ProductPO;
-import edu.ub.pis2324.xoping.presentation.ui.adapters.ShopRecyclerViewAdapter;
-import edu.ub.pis2324.xoping.presentation.viewmodels.fragments.CatalegViewModel;
-========
+
 import edu.ub.pis2324.perros.AppContainer;
 import edu.ub.pis2324.perros.MyApplication;
-import edu.ub.pis2324.perros.R;
-import edu.ub.pis2324.perros.databinding.FragmentShoppingBinding;
+import edu.ub.pis2324.xoping.R;
+import edu.ub.pis2324.xoping.databinding.FragmentCatalegBinding;
 import edu.ub.pis2324.perros.presentation.pos.ProductPO;
 import edu.ub.pis2324.perros.presentation.ui.adapters.ShopRecyclerViewAdapter;
-import edu.ub.pis2324.perros.presentation.viewmodels.fragments.ShoppingViewModel;
->>>>>>>> e52479ff811fc811cee6efac2d43cd25c14e674a:app/src/main/java/edu/ub/pis2324/perros/presentation/ui/fragments/ShoppingFragment.java
+import edu.ub.pis2324.perros.presentation.viewmodels.fragments.CatalegViewModel;
+
 
 public class CatalegFragment extends Fragment {
   /* Constants */
@@ -142,7 +134,7 @@ public class CatalegFragment extends Fragment {
    */
   private void initRecyclerView() {
     rvLayoutManager = new LinearLayoutManager(getContext());
-    binding.rvProducts.setLayoutManager(rvLayoutManager);
+    //binding.rvProducts.setLayoutManager(rvLayoutManager);
 
     initRecyclerViewAdapter();
   }
@@ -155,7 +147,7 @@ public class CatalegFragment extends Fragment {
         product -> navigateToViewProductDetailsFragment(product),
         position -> catalegViewModel.hideProduct(position)
     );
-    binding.rvProducts.setAdapter(rvProductsAdapter);
+    //binding.rvProducts.setAdapter(rvProductsAdapter);
   }
 
   /**
@@ -222,8 +214,8 @@ public class CatalegFragment extends Fragment {
    * @param mustShow true if the message must be shown, false otherwise
    */
   private void showNoProductsAvailable(boolean mustShow) {
-    binding.clNoProductsAvailable.setVisibility(
-        mustShow ? android.view.View.VISIBLE : android.view.View.GONE
+    binding.fragmentCataleg.setVisibility(
+        mustShow ? View.VISIBLE : View.GONE
     );
   }
 }

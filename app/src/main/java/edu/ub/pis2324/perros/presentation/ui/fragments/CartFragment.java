@@ -17,7 +17,7 @@ import android.widget.Toast;
 
 import edu.ub.pis2324.perros.AppContainer;
 import edu.ub.pis2324.perros.MyApplication;
-import edu.ub.pis2324.perros.databinding.FragmentCartBinding;
+import edu.ub.pis2324.xoping.databinding.FragmentCartBinding;
 import edu.ub.pis2324.perros.presentation.ui.adapters.CartRecyclerViewAdapter;
 import edu.ub.pis2324.perros.presentation.viewmodels.fragments.CartViewModel;
 
