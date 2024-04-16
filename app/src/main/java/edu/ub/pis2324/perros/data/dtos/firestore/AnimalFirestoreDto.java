@@ -2,18 +2,24 @@ package edu.ub.pis2324.perros.data.dtos.firestore;
 
 import com.google.firebase.firestore.DocumentId;
 
+import edu.ub.pis2324.xoping.domain.model.valueobjects.AnimalId;
+
 /**
  * DTO for a product.
  */
 public class AnimalFirestoreDto {
   /* Attributes */
   @DocumentId
+  private AnimalId id;
   private String nom;
-  private String raza;
-  private int edat;
-  private float pes;
-  private float mida;
+  private String edat;
+  private String descripcio;
+  private String pelatge;
   private String imageUrl;
+  private float mida;
+  private float pes;
+  private String raza;
+  private boolean gos;
 
   /**
    * Empty constructor required for Firestore.
@@ -24,12 +30,16 @@ public class AnimalFirestoreDto {
 
   /* Getters */
 
+  public AnimalId getId() { return id; }
   public String getNom() { return nom; }
-  public String getRaza() { return raza; }
-  public int getEdat() { return edat; }
-  public float getPes() { return pes; }
-  public float getMida() { return mida; }
+  public String getEdat() { return edat; }
+  public String getDescripcio() { return descripcio; }
   public String getImageUrl() { return imageUrl; }
+  public String getPelatge() { return pelatge; }
+  public float getMida() { return mida; }
+  public float getPes() { return pes; }
+  public String getRaza() { return raza; }
+  public boolean isGos() { return gos; }
 
 
 }

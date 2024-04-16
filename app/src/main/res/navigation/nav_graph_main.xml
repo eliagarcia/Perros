@@ -7,7 +7,11 @@
 
     <fragment
         android:id="@+id/shoppingFragment"
+<<<<<<< HEAD
+        android:name="edu.ub.pis2324.xoping.presentation.ui.fragments.CatalegFragment"
+=======
         android:name="edu.ub.pis2324.perros.presentation.ui.fragments.ShoppingFragment"
+>>>>>>> e52479ff811fc811cee6efac2d43cd25c14e674a
         android:label="@string/shop_title" >
         <action
             android:id="@+id/action_shoppingFragment_to_viewProductDetailsFragment"
