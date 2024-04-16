@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="?attr/colorSurfaceContainerHigh"
     android:focusableInTouchMode="true"
-    tools:context="edu.ub.pis2324.xoping.presentation.ui.main.ShoppingActivity">
+    tools:context="edu.ub.pis2324.perros.presentation.ui.main.ShoppingActivity">
 
 <!--    <androidx.cardview.widget.CardView-->
 <!--        android:id="@+id/cardView3"-->
