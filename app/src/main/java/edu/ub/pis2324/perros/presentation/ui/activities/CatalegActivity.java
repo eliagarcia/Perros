@@ -1,4 +1,4 @@
-package edu.ub.pis2324.xoping.presentation.ui.activities;
+package edu.ub.pis2324.perros.presentation.ui.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.navigation.NavController;
