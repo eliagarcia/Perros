@@ -41,6 +41,7 @@ public class LogInActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
 
         /* Initializations */
+        initLogIn();
 
 
     }

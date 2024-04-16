@@ -1,31 +1,45 @@
 package edu.ub.pis2324.xoping.domain.model.entities;
 
-import edu.ub.pis2324.xoping.domain.model.valueobjects.Price;
 import edu.ub.pis2324.xoping.domain.model.valueobjects.AnimalId;
 
 /**
- * DTO for a product.
+ * DTO for an animal.
  */
 public class Animal {
   /* Attributes */
   private AnimalId id;
-  private String name;
-  private String nameLowerCase;
-  private String description;
+  private String nom;
+  private String edat;
+  private String descripcio;
+  private String pelatge;
   private String imageUrl;
+  private float mida;
+  private float pes;
+  private String raza;
+  private boolean gos;
 
   public Animal(
       AnimalId id,
-      String name,
-      String nameLowerCase,
-      String description,
-      String imageUrl
+      String nom,
+      String edat,
+      String descripcio,
+      String imageUrl,
+      String pelatge,
+      float mida,
+      float pes,
+      String raza,
+      boolean gos
   ) {
     this.id = id;
-    this.name = name;
-    this.nameLowerCase = nameLowerCase;
-    this.description = description;
+    this.nom = nom;
+    this.edat = edat;
+    this.descripcio = descripcio;
     this.imageUrl = imageUrl;
+    this.pelatge = pelatge;
+    this.mida = mida;
+    this.pes = pes;
+    this.raza = raza;
+    this.gos = gos;
   }
 
   /**
@@ -36,10 +50,16 @@ public class Animal {
 
   /* Getters */
   public AnimalId getId() { return id; }
-  public String getName() { return name; }
-  public String getNameLowerCase() { return nameLowerCase; }
-  public String getDescription() { return description; }
+  public String getNom() { return nom; }
+  public String getEdat() { return edat; }
+  public String getDescripcio() { return descripcio; }
   public String getImageUrl() { return imageUrl; }
+  public String getPelatge() { return pelatge; }
+  public float getMida() { return mida; }
+  public float getPes() { return pes; }
+  public String getRaza() { return raza; }
+  public boolean isGos() { return gos; }
+
 
   @Override
   public boolean equals(Object obj) {
