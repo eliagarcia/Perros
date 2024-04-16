@@ -1,10 +1,8 @@
 package edu.ub.pis2324.perros.domain.model.entities;
 
-<<<<<<< HEAD:app/src/main/java/edu/ub/pis2324/xoping/domain/model/entities/Animal.java
-import edu.ub.pis2324.xoping.domain.model.valueobjects.AnimalId;
-=======
+
 import edu.ub.pis2324.perros.domain.model.valueobjects.AnimalId;
->>>>>>> 7c45018d28c71b15361a4111147074f431717cf5:app/src/main/java/edu/ub/pis2324/perros/domain/model/entities/Animal.java
+import edu.ub.pis2324.perros.domain.model.valueobjects.AnimalId;
 
 /**
  * DTO for an animal.
