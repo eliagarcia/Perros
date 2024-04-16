@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/shoppingFragment"
-        android:name="edu.ub.pis2324.xoping.presentation.ui.fragments.ShoppingFragment"
+        android:name="edu.ub.pis2324.perros.presentation.ui.fragments.ShoppingFragment"
         android:label="@string/shop_title" >
         <action
             android:id="@+id/action_shoppingFragment_to_viewProductDetailsFragment"
@@ -15,22 +15,22 @@
     </fragment>
     <fragment
         android:id="@+id/viewProductDetailsFragment"
-        android:name="edu.ub.pis2324.xoping.presentation.ui.fragments.ViewProductDetailsFragment"
+        android:name="edu.ub.pis2324.perros.presentation.ui.fragments.ViewProductDetailsFragment"
         android:label="@string/view_product_details_title" >
         <argument
             android:name="PRODUCT"
-            app:argType="edu.ub.pis2324.xoping.presentation.pos.ProductPO" />
+            app:argType="edu.ub.pis2324.perros.presentation.pos.ProductPO" />
         <action
             android:id="@+id/action_viewProductDetailsFragment_to_shoppingFragment"
             app:destination="@id/shoppingFragment" />
     </fragment>
     <fragment
         android:id="@+id/cartFragment"
-        android:name="edu.ub.pis2324.xoping.presentation.ui.fragments.CartFragment"
+        android:name="edu.ub.pis2324.perros.presentation.ui.fragments.CartFragment"
         android:label="@string/cart_title" />
     <fragment
         android:id="@+id/profileFragment"
-        android:name="edu.ub.pis2324.xoping.presentation.ui.fragments.ProfileFragment"
+        android:name="edu.ub.pis2324.perros.presentation.ui.fragments.ProfileFragment"
         android:label="@string/profile_title"
         tools:layout="@layout/fragment_profile" >
         <action
@@ -41,7 +41,7 @@
     </fragment>
     <fragment
         android:id="@+id/logInFragment"
-        android:name="edu.ub.pis2324.xoping.presentation.ui.fragments.LogInFragment"
+        android:name="edu.ub.pis2324.perros.presentation.ui.fragments.LogInFragment"
         android:label="@string/login_title"
         tools:layout="@layout/fragment_log_in" >
         <action
@@ -53,7 +53,7 @@
     </fragment>
     <fragment
         android:id="@+id/signUpFragment"
-        android:name="edu.ub.pis2324.xoping.presentation.ui.fragments.SignUpFragment"
+        android:name="edu.ub.pis2324.perros.presentation.ui.fragments.SignUpFragment"
         android:label="@string/signup_title"
         tools:layout="@layout/fragment_sign_up" >
         <action
